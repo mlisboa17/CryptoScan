@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Leonardo 2 - Flask</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 20px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            color: #1a1a2e;
+            font-weight: bold;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0,217,255,0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .features {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .feature-icon { font-size: 32px; margin-bottom: 10px; }
+        .feature-title { font-size: 16px; font-weight: bold; margin-bottom: 5px; }
+        .feature-desc { color: #888; font-size: 13px; }
+        
+        .tech-stack {
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .tech-stack span {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 App Leonardo 2</h1>
+        <p class="subtitle">Bot de Trading com Dashboard Flask</p>
+        
+        <div class="buttons">
+            <a href="/charts" class="btn btn-primary">
+                📊 Dashboard com Gráficos
+            </a>
+            <a href="/api/status" class="btn btn-secondary">
+                🔌 API Status
+            </a>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <div class="feature-title">Gráficos em Tempo Real</div>
+                <div class="feature-desc">Mini-charts com últimos 15 preços</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔗</div>
+                <div class="feature-title">Binance API</div>
+                <div class="feature-desc">Dados reais direto da exchange</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Flask Backend</div>
+                <div class="feature-desc">Leve, rápido e simples</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">RSI Indicator</div>
+                <div class="feature-desc">Indicador calculado em tempo real</div>
+            </div>
+        </div>
+        
+        <div class="tech-stack">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Chart.js</span>
+            <span>Binance API</span>
+        </div>
+    </div>
+</body>
+</html>
